@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MCQ Test Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .result {
+            margin-bottom: 20px;
+        }
+        .result p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+        .result strong {
+            font-weight: bold;
+        }
+        .result.correct {
+            color: green;
+        }
+        .result.incorrect {
+            color: red;
+        }
+        .correct-answer {
+            color: blue;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+        hr {
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results</h1>
+    <p>Your score: {{ score }} / {{ total }}</p>
+    <hr>
+    {% for result in results %}
+        <div>
+            <p><strong>Question:</strong> {{ result.question }}</p>
+            <div class="container">
+                <label class="box">
+                    <p><strong>Your Answer:</strong> {{ result.user_answer }}</p>
+                </label>
+                <label class="box">
+                    <p><strong>Correct Answer:</strong> {{ result.correct_answer }}</p>
+                </label><br>
+            </div>
+            <p class="result {{ 'correct' if result.is_correct else 'incorrect' }}"><strong>Result:</strong> {{ "Correct" if result.is_correct else "Incorrect" }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+    <a href="{{ url_for('mcq_test') }}">Retake Test</a>
+</body>
+</html>
