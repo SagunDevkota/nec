@@ -3,40 +3,45 @@ import random
 
 app = Flask(__name__)
 
+
 def parse_mcq_file(filepath, shuffle=False):
     questions = []
-    
+
     with open(filepath, 'r') as file:
         lines = file.readlines()
-    
+
     question = {}
-    
+
     for line in lines:
         line = line.strip()
-        
+
         if line.startswith("Answer:"):
             question["answer"] = line.replace("Answer:", "").strip()
             questions.append(question)
             question = {}
-        elif line.startswith(("A)", "B)", "C)", "D)", "a)", "b)", "c)", "d)","A.", "B.", "C.", "D.", "a.", "b.", "c.", "d.","(A)", "(B)", "(C)", "(D)", "(a)", "(b)", "(c)", "(d)")):
-            question["options"].append(line)
+        elif line.startswith(("A)", "B)", "C)", "D)", "a)", "b)", "c)", "d)", "A.", "B.", "C.", "D.", "a.", "b.", "c.", "d.", "(A)", "(B)", "(C)", "(D)", "(a)", "(b)", "(c)", "(d)")):
+            if ("options" in question.keys()):
+                question["options"].append(line)
+            else:
+                question["options"] = [line]
         elif line:
-            if "question" not in question:
+            if "question" not in question.keys():
                 question["question"] = line
-                question["options"] = []
             else:
                 # Append to the question if it's multi-line
                 question["question"] += " " + line
-    
-    if(shuffle):
-	    # Randomize the order of the questions
-	    random.shuffle(questions)
 
-    return questions
+    if (shuffle):
+        # Randomize the order of the questions
+        random.shuffle(questions)
+
+    return random.sample(questions, 100)
+
 
 # Load questions from file
 mcq_file_path = "mcq_test.txt"  # Replace with your file path
 global_questions = None
+
 
 @app.route("/", methods=["GET", "POST"])
 def mcq_test():
@@ -60,9 +65,9 @@ def mcq_test():
             })
         return render_template("result.html", results=results, score=score, total=len(global_questions))
     else:
-    	questions = parse_mcq_file(mcq_file_path, shuffle=True)
-    	global_questions = questions
-    
+        questions = parse_mcq_file(mcq_file_path, shuffle=True)
+        global_questions = questions
+
     return render_template("mcq.html", questions=questions)
 
 

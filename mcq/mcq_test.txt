@@ -5556,7 +5556,8 @@ c) Worst-case complexity
 d) Exact complexity  
 Answer: c) Worst-case complexity
 
-Q8: When the upper and lower bounds of an algorithm are the same, the complexity is expressed as: a) \( O(n) \)  
+Q8: When the upper and lower bounds of an algorithm are the same, the complexity is expressed as: 
+a) \( O(n) \)  
 b) \( \Omega(n) \)  
 c) \( \Theta(n) \)  
 d) \( O(n^2) \)  
@@ -19198,4 +19199,846 @@ c) Task A raises its priority to the ceiling of R1 only
 d) Task A lowers its priority after accessing R1  
 
 Answer: b) Task A acquires locks on R1 and R2 sequentially   
+
+1. What is a key issue caused by uncontrolled concurrent access to shared data objects?  
+A. Improved system performance  
+B. Race conditions  
+C. Reduced memory usage  
+D. Faster execution  
+
+Answer: B. Race conditions  
+
+2. Which of the following is NOT a challenge in concurrent access?  
+A. Deadlocks  
+B. Data redundancy  
+C. Starvation  
+D. Priority inversion  
+
+Answer: B. Data redundancy  
+
+3. What type of semaphore allows a defined number of threads to access a shared resource simultaneously?  
+A. Binary semaphore  
+B. Counting semaphore  
+C. Mutex  
+D. Priority semaphore  
+
+Answer: B. Counting semaphore  
+
+4. What is the primary advantage of using Readers-Writers locks?  
+A. Prevents deadlocks  
+B. Allows multiple readers while ensuring only one writer  
+C. Eliminates the need for synchronization  
+D. Enhances priority inversion  
+
+Answer: B. Allows multiple readers while ensuring only one writer  
+
+5. Which protocol assumes that conflicts between transactions are rare and validates consistency before committing changes?  
+A. Pessimistic Concurrency Control  
+B. Two-Phase Locking  
+C. Optimistic Concurrency Control  
+D. Priority Inversion Protocol  
+
+Answer: C. Optimistic Concurrency Control  
+
+6. What does the Two-Phase Locking (2PL) protocol ensure?  
+A. Increased transaction speed  
+B. Prevention of starvation  
+C. Serializability of transactions  
+D. Deadlock-free operations  
+
+Answer: C. Serializability of transactions  
+
+7. Which mechanism is used to prevent priority inversion?  
+A. Timestamp ordering  
+B. Non-blocking algorithms  
+C. Priority-inheritance protocol  
+D. Deadlock detection  
+
+Answer: C. Priority-inheritance protocol  
+
+8. What is the primary goal of Multiversion Concurrency Control (MVCC)?  
+A. Reduce memory usage  
+B. Allow concurrent reads and writes  
+C. Eliminate race conditions  
+D. Prevent nested locks  
+
+Answer: B. Allow concurrent reads and writes  
+
+9. Which of the following is a best practice for preventing deadlocks?  
+A. Use nested locks  
+B. Ignore timeouts  
+C. Implement resource ordering  
+D. Use long critical sections  
+
+Answer: C. Implement resource ordering  
+
+10. Which database isolation level ensures the highest level of consistency but reduces concurrency?  
+A. Read Uncommitted  
+B. Read Committed  
+C. Repeatable Read  
+D. Serializable  
+
+Answer: D. Serializable   
+
+1. What is the primary characteristic of real-time communication?
+   a) High bandwidth
+   b) Guaranteed timing constraints  
+   c) Unlimited storage capacity  
+   d) Encryption security  
+   Answer: b) Guaranteed timing constraints  
+
+2. Which of the following is true for soft real-time communication systems?  
+   a) Missing a deadline leads to catastrophic failure.  
+   b) Timing constraints are rigid.  
+   c) Performance degrades if deadlines are missed.  
+   d) Used in air traffic control.  
+   Answer: c) Performance degrades if deadlines are missed.  
+
+3. What is the key difference between hard and soft real-time communication?  
+   a) Hard real-time systems use more bandwidth.  
+   b) Soft real-time systems have strict deadlines.  
+   c) Missing a deadline in hard real-time systems leads to failure, while in soft real-time systems, it results in degraded performance.  
+   d) Soft real-time systems do not use protocols.  
+   Answer: c) Missing a deadline in hard real-time systems leads to failure, while in soft real-time systems, it results in degraded performance.  
+
+4. In a time-triggered communication model, when does data transmission occur?  
+   a) At pre-scheduled times.  
+   b) When an event occurs.  
+   c) Only during system initialization.  
+   d) Randomly.  
+   Answer: a) At pre-scheduled times.  
+
+5. Which of the following protocols is commonly used in real-time communication?  
+   a) HTTP  
+   b) Real-Time Transport Protocol (RTP)  
+   c) FTP  
+   d) SMTP  
+   Answer: b) Real-Time Transport Protocol (RTP)  
+
+6. What is the purpose of priority management in real-time communication?  
+   a) To increase bandwidth usage.  
+   b) To ensure critical data is transmitted first.  
+   c) To minimize latency for all messages.  
+   d) To enable encryption for messages.  
+   Answer: b) To ensure critical data is transmitted first.  
+
+7. Which real-time communication model is suitable for unpredictable data generation patterns?  
+   a) Time-Triggered Model  
+   b) Event-Triggered Model  
+   c) Hybrid Model  
+   d) Priority-Inheritance Model  
+   Answer: b) Event-Triggered Model  
+
+8. Which of the following systems is an example of hard real-time communication?  
+   a) Online gaming  
+   b) VoIP  
+   c) Pacemaker  
+   d) Video streaming  
+   Answer: c) Pacemaker  
+
+9. What does QoS (Quality of Service) ensure in real-time communication systems?  
+   a) Unlimited data throughput  
+   b) Guaranteed performance levels like delay, jitter, and throughput  
+   c) Data encryption and security  
+   d) Compatibility with all protocols  
+   Answer: b) Guaranteed performance levels like delay, jitter, and throughput  
+
+10. What is the primary purpose of fault tolerance in real-time communication systems?  
+   a) Reduce bandwidth usage  
+   b) Enhance encryption protocols  
+   c) Handle communication failures gracefully  
+   d) Increase system latency  
+   Answer: c) Handle communication failures gracefully  
+
+1. What is the primary advantage of priority-based service in switched networks?  
+   a) Guarantees fairness among all traffic classes.  
+   b) Ensures timely delivery of critical or real-time traffic.  
+   c) Reduces the complexity of the system.  
+   d) Eliminates packet loss.  
+   Answer: b) Ensures timely delivery of critical or real-time traffic.  
+
+2. What is the main disadvantage of priority-based service?  
+   a) It cannot handle time-sensitive data.  
+   b) Higher-priority traffic can cause starvation of lower-priority traffic.  
+   c) It is overly complex to configure.  
+   d) It prioritizes fairness over real-time requirements.  
+   Answer: b) Higher-priority traffic can cause starvation of lower-priority traffic.  
+
+3. In a priority-based service system, which of the following happens in the case of preemptive priority?  
+   a) Higher-priority packets are delayed until lower-priority packets are completed.  
+   b) Lower-priority packets are interrupted and replaced by higher-priority packets.  
+   c) All packets are treated equally.  
+   d) No packet is transmitted until the highest-priority packet is processed.  
+   Answer: b) Lower-priority packets are interrupted and replaced by higher-priority packets.  
+
+4. Which of the following is true about Weighted Round-Robin (WRR) service?  
+   a) It ensures that all queues receive service, preventing starvation.  
+   b) It allows higher-priority traffic to monopolize the bandwidth.  
+   c) It uses fixed, pre-scheduled times for packet transmission.  
+   d) It always results in lower bandwidth usage.  
+   Answer: a) It ensures that all queues receive service, preventing starvation.  
+
+5. What is the key feature of Weighted Round-Robin (WRR) scheduling?  
+   a) Assigning static priorities to traffic classes.  
+   b) Cycling through queues and servicing each based on its assigned weight.  
+   c) Allowing high-priority traffic to preempt lower-priority traffic.  
+   d) Limiting the total number of queues.  
+   Answer: b) Cycling through queues and servicing each based on its assigned weight.  
+
+6. Which service discipline is better suited for real-time communication, such as VoIP or video streaming?  
+   a) Priority-Based Service  
+   b) Weighted Round-Robin Service  
+   c) Round-Robin Scheduling  
+   d) Token Bucket Service  
+   Answer: a) Priority-Based Service  
+
+7. What is the main disadvantage of Weighted Round-Robin (WRR) service in real-time systems?  
+   a) It causes unfair bandwidth distribution.  
+   b) High-priority traffic may experience delays while lower-priority queues are serviced.  
+   c) It doesn't support mixed traffic types.  
+   d) It only works with low-bandwidth systems.  
+   Answer: b) High-priority traffic may experience delays while lower-priority queues are serviced.  
+
+8. What is the benefit of assigning weights in Weighted Round-Robin (WRR) service?  
+   a) It eliminates the need for prioritizing certain traffic.  
+   b) It ensures fairness by allocating bandwidth based on importance.  
+   c) It simplifies the network configuration.  
+   d) It reduces the overall network traffic.  
+   Answer: b) It ensures fairness by allocating bandwidth based on importance.  
+
+9. Which of the following is a suitable use case for Weighted Round-Robin (WRR) service?  
+   a) Real-time communication where low latency is critical.  
+   b) Mixed-traffic networks with diverse Quality of Service (QoS) needs.  
+   c) Systems with only one type of traffic.  
+   d) Critical control systems that require strict timing enforcement.  
+   Answer: b) Mixed-traffic networks with diverse Quality of Service (QoS) needs.  
+
+10. What is the primary disadvantage of Weighted Round-Robin (WRR) service in highly dynamic networks?  
+   a) It causes network congestion.  
+   b) It is difficult to configure due to the complexity of weight assignments.  
+   c) It leads to network downtime.  
+   d) It does not handle high-priority traffic efficiently.  
+   Answer: b) It is difficult to configure due to the complexity of weight assignments.  
+
+1. What is the primary function of Medium Access Control (MAC) protocols?
+
+A) To encrypt data transmitted over the network.  
+B) To manage how devices access a shared communication medium.  
+C) To route data packets across different networks.  
+D) To ensure the integrity of data during transmission.
+
+Answer: B) To manage how devices access a shared communication medium.
+
+2. Which of the following MAC protocols uses a special token to control access to the communication medium?
+
+A) Aloha Protocol  
+B) Carrier Sense Multiple Access (CSMA)  
+C) Token Passing  
+D) Polling Protocol
+
+Answer: C) Token Passing
+
+3. What does the RSVP protocol mainly provide in network communication?
+
+A) Provides a way for devices to communicate without collisions.  
+B) Guarantees the quality of service (QoS) by reserving resources for specific traffic flows.  
+C) Manages congestion in high-traffic networks.  
+D) Distributes tokens among devices to ensure fair communication.
+
+Answer: B) Guarantees the quality of service (QoS) by reserving resources for specific traffic flows.
+
+4. In which scenario is DiffServ most suitable?
+
+A) When precise, per-flow QoS management is required.  
+B) For applications requiring end-to-end resource reservation like video conferencing.  
+C) For large-scale networks needing a simple and scalable QoS solution.  
+D) For small networks with minimal traffic.
+
+Answer: C) For large-scale networks needing a simple and scalable QoS solution.
+
+5. Which of the following protocols is used for ensuring real-time traffic, such as VoIP and video conferencing, gets guaranteed service?
+
+A) Aloha Protocol  
+B) RSVP  
+C) CSMA  
+D) MPLS
+
+Answer: B) RSVP
+
+6. What is the main advantage of Weighted Round-Robin (WRR) scheduling compared to Priority-Based Service?
+
+A) It guarantees higher priority traffic is always served first.  
+B) It ensures fairness by allocating bandwidth based on assigned weights.  
+C) It avoids starvation of lower-priority traffic.  
+D) It provides deterministic service for time-sensitive applications.
+
+Answer: B) It ensures fairness by allocating bandwidth based on assigned weights.
+
+7. Which MAC protocol is most likely to cause high collision rates due to random transmission attempts without checking the medium?
+
+A) Slotted Aloha  
+B) Token Passing  
+C) Pure Aloha  
+D) Non-Persistent CSMA
+
+Answer: C) Pure Aloha
+
+8. Which of the following is a feature of the Polling Protocol in MAC systems?
+
+A) Devices transmit data at random intervals.  
+B) A central master controls when each device can transmit.  
+C) All devices continuously monitor the channel for traffic.  
+D) Only devices holding a special token can transmit data.
+
+Answer: B) A central master controls when each device can transmit.
+
+9. What type of traffic is typically prioritized in a network using Priority-Based Service?
+
+A) Downloading large files  
+B) Real-time voice or video communication  
+C) Bulk data transfers  
+D) Low-latency background services
+
+Answer: B) Real-time voice or video communication
+
+10. Which of the following protocols is based on label-switching for traffic engineering and optimizing network resources?
+
+A) RSVP  
+B) DiffServ  
+C) MPLS with Traffic Engineering (TE)  
+D) Token Passing
+
+Answer: C) MPLS with Traffic Engineering (TE) 
+
+1. What is the primary feature of a distributed system?
+
+A) Single centralized management
+B) Multiple independent nodes working together
+C) No resource sharing among nodes
+D) Single node operation
+
+Answer: B) Multiple independent nodes working together
+
+2. Which of the following is an advantage of distributed systems?
+
+A) Increased complexity
+B) Fault tolerance
+C) Reduced scalability
+D) Lower performance
+
+Answer: B) Fault tolerance
+
+3. What does the scalability of a distributed system refer to?
+
+A) Ability to withstand system failures
+B) Ability to process tasks concurrently
+C) Ability to easily expand by adding more nodes
+D) Ability to maintain consistency across nodes
+
+Answer: C) Ability to easily expand by adding more nodes
+
+4. What is a major disadvantage of distributed systems?
+
+A) Scalability
+B) Security challenges
+C) Increased fault tolerance
+D) Resource sharing
+
+Answer: B) Security challenges
+
+5. In the context of distributed systems, what does fault tolerance ensure?
+
+A) Faster data transmission
+B) The system continues to function despite node failures
+C) Efficient data replication across nodes
+D) Global reach of the system
+
+Answer: B) The system continues to function despite node failures
+
+6. Which of the following is a key advantage of cloud computing in relation to distributed systems?
+
+A) It operates on a single machine
+B) It uses on-demand resource provisioning
+C) It is independent of network communication
+D) It reduces complexity in managing resources
+
+Answer: B) It uses on-demand resource provisioning
+
+7. Which of the following is a characteristic of cloud computing?
+
+A) Centralized resource management
+B) Lack of scalability
+C) Pay-per-use pricing model
+D) No flexibility in hardware and software configurations
+
+Answer: C) Pay-per-use pricing model
+
+8. Which of the following protocols helps manage network resources in cloud computing environments?
+
+A) Resource Reservation Protocol (RSVP)
+B) HTTP/HTTPS
+C) ARP
+D) IP
+
+Answer: A) Resource Reservation Protocol (RSVP)
+
+9. What challenge do distributed systems face in terms of data consistency?
+
+A) Ensuring data consistency across all nodes
+B) Maintaining high scalability
+C) Reducing network dependency
+D) Synchronizing the hardware configurations
+
+Answer: A) Ensuring data consistency across all nodes
+
+10. In cloud computing, which of the following is an example of a distributed service?
+
+A) Single machine hosting
+B) AWS EC2 instances
+C) Centralized database management
+D) Simple static websites
+
+Answer: B) AWS EC2 instances
+
+Q1. Which of the following is a key characteristic of the Client-Server model in distributed systems?  
+a) All nodes are equal and can act as clients or servers  
+b) Clients request services while servers provide them  
+c) The system does not have a single point of failure  
+d) Data is always strongly consistent across nodes  
+
+Answer: b) Clients request services while servers provide them  
+
+Q2. What is one disadvantage of the Peer-to-Peer (P2P) model?  
+a) Single point of failure  
+b) Increased latency due to multiple tiers  
+c) Difficult to manage and secure  
+d) Centralized resource management  
+
+Answer: c) Difficult to manage and secure  
+
+Q3. Which distributed system model is best suited for separating the user interface, business logic, and database?  
+a) Peer-to-Peer model  
+b) Client-Server model  
+c) Multitier (N-tier) model  
+d) Distributed Object Model  
+
+Answer: c) Multitier (N-tier) model  
+
+Q4. Service-Oriented Architecture (SOA) is commonly used in:  
+a) File-sharing systems like BitTorrent  
+b) Microservices-based applications  
+c) Centralized resource management systems  
+d) Single-tier applications  
+
+Answer: b) Microservices-based applications  
+
+Q5. Which of the following is a disadvantage of the Distributed Object Model?  
+a) Lack of encapsulation  
+b) Difficulty in abstraction  
+c) High performance for remote calls  
+d) Complexity in implementation  
+
+Answer: d) Complexity in implementation  
+
+Q6. Which distributed system mechanism stores data across multiple machines and ensures synchronization using replication protocols?  
+a) Load balancing  
+b) Distributed databases  
+c) Virtualization  
+d) Distributed file systems  
+
+Answer: b) Distributed databases  
+
+Q7. What is the primary purpose of load balancing in distributed systems?  
+a) To reduce data replication  
+b) To enable resource sharing between nodes  
+c) To evenly distribute workloads across resources  
+d) To synchronize clocks between nodes  
+
+Answer: c) To evenly distribute workloads across resources  
+
+Q8. Which of the following is a challenge in distributed file systems?  
+a) Lack of resource sharing  
+b) High fault tolerance  
+c) Ensuring data consistency  
+d) Decreased scalability  
+
+Answer: c) Ensuring data consistency  
+
+Q9. Virtualization in distributed systems is mainly used for:  
+a) Synchronizing nodes in a network  
+b) Creating virtual instances of physical resources  
+c) Ensuring strong data consistency across nodes  
+d) Implementing distributed locking mechanisms  
+
+Answer: b) Creating virtual instances of physical resources  
+
+Q10. Hadoop Distributed File System (HDFS) is an example of:  
+a) Load balancing  
+b) Distributed file systems  
+c) Distributed databases  
+d) Virtualization  
+
+Answer: b) Distributed file systems  
+
+Q11. Which of the following is used to address synchronization issues in distributed systems?  
+a) Distributed locking mechanisms  
+b) Distributed consensus algorithms  
+c) File replication  
+d) Data sharding  
+
+Answer: b) Distributed consensus algorithms  
+
+Q12. What technique is commonly employed to ensure fault tolerance in distributed systems?  
+a) Load balancing  
+b) Strong consistency models  
+c) Data replication and redundancy  
+d) Mutexes and semaphores  
+
+Answer: c) Data replication and redundancy  
+
+Q13. The CAP theorem in distributed systems stands for:  
+a) Communication, Abstraction, Partitioning  
+b) Consistency, Availability, Partition Tolerance  
+c) Coordination, Authorization, Processing  
+d) Computation, Accessibility, Performance  
+
+Answer: b) Consistency, Availability, Partition Tolerance  
+
+Q14. What is the primary concern when multiple processes compete for the same resource in a distributed system?  
+a) Increased latency  
+b) Fault tolerance  
+c) Resource contention  
+d) Network dependency  
+
+Answer: c) Resource contention  
+
+Q15. Which strategy is NOT commonly used to ensure security in distributed systems?  
+a) Encryption  
+b) Secure communication protocols  
+c) Distributed file systems  
+d) Authentication mechanisms  
+
+Answer: c) Distributed file systems  
+
+1. Which of the following is a key characteristic of Grid Computing?  
+A) Homogeneous resources  
+B) Tight coupling between systems  
+C) Geographical distribution  
+D) Low latency  
+
+Answer: C) Geographical distribution  
+
+2. What is a prominent example of a project that utilizes Grid Computing?  
+A) Beowulf Clusters  
+B) SETI@home  
+C) AWS Lambda  
+D) Google Cloud Platform  
+
+Answer: B) SETI@home  
+
+3. In Cluster Computing, nodes typically share which of the following characteristics?  
+A) Heterogeneous hardware configurations  
+B) Loose coupling with decentralized management  
+C) Similar hardware and software configurations  
+D) High latency due to geographical distribution  
+
+Answer: C) Similar hardware and software configurations  
+
+4. Which of the following is NOT an advantage of Cluster Computing?  
+A) High fault tolerance  
+B) Efficient for low-latency tasks  
+C) Unlimited scalability  
+D) Centralized management  
+
+Answer: C) Unlimited scalability  
+
+5. Cloud Computing offers which of the following advantages?  
+A) Dependency on local infrastructure  
+B) High initial setup cost  
+C) Scalability and elasticity  
+D) Limited accessibility  
+
+Answer: C) Scalability and elasticity  
+
+6. Which distributed system type is most suitable for dynamically scaling resources based on demand?  
+A) Grid Computing  
+B) Cluster Computing  
+C) Cloud Computing  
+D) High-Performance Computing  
+
+Answer: C) Cloud Computing  
+
+7. What is a common disadvantage of Grid Computing?  
+A) Limited to a single location  
+B) High cost of dedicated hardware  
+C) Dependency on network reliability and bandwidth  
+D) Difficulty in scaling resources  
+
+Answer: C) Dependency on network reliability and bandwidth  
+
+8. Which of the following best describes the architecture of Cloud Computing?  
+A) Tightly coupled systems managed as a single unit  
+B) Loosely coupled systems with decentralized management  
+C) Abstracted and virtualized infrastructure managed by providers  
+D) Peer-to-peer systems with no central control  
+
+Answer: C) Abstracted and virtualized infrastructure managed by providers  
+
+9. In which scenario is Cluster Computing most commonly used?  
+A) Running global-scale scientific computations  
+B) On-demand hosting of web applications  
+C) High-performance tasks requiring consistent inter-node communication  
+D) Large-scale data analysis distributed across continents  
+
+Answer: C) High-performance tasks requiring consistent inter-node communication  
+
+10. What is a significant difference between Grid and Cloud Computing?  
+A) Grid computing uses virtualized resources; cloud computing does not.  
+B) Grid computing relies on geographical proximity; cloud computing spans locations.  
+C) Grid computing is decentralized, while cloud computing is managed by providers.  
+D) Grid computing is on-demand; cloud computing is fixed resource allocation.  
+
+Answer: C) Grid computing is decentralized, while cloud computing is managed by providers.  
+
+### Multiple-Choice Questions on Cloud Computing
+
+1. What is the primary characteristic of Cloud Computing?  
+A) Users own the underlying infrastructure  
+B) Resources are delivered on-demand over the internet  
+C) Services are provided for free  
+D) Cloud computing systems are always localized to a single region  
+
+Answer: B) Resources are delivered on-demand over the internet  
+
+2. Which technology enabled the creation of virtual machines, allowing multiple operating systems to run on a single physical server?  
+A) Distributed Systems  
+B) Web Services  
+C) Virtualization  
+D) Utility Computing  
+
+Answer: C) Virtualization  
+
+3. What does "pay-as-you-go" in cloud computing refer to?  
+A) Users pay upfront for cloud resources  
+B) Users pay only for the resources they consume  
+C) Cloud providers charge a flat rate for all services  
+D) Users pay based on subscription plans  
+
+Answer: B) Users pay only for the resources they consume  
+
+4. Which of the following is a desired feature of Cloud Computing?  
+A) Static resource allocation  
+B) Limited network access  
+C) Scalability and elasticity  
+D) Centralized resource management  
+
+Answer: C) Scalability and elasticity  
+
+5. Which of the following is a challenge associated with Cloud Computing?  
+A) Guaranteed internet connectivity  
+B) Vendor lock-in  
+C) Unlimited scalability  
+D) Complete control over the infrastructure  
+
+Answer: B) Vendor lock-in  
+
+6. Which of the following is an advantage of Cloud Computing?  
+A) Limited global access  
+B) High upfront capital investment  
+C) Reduced dependency on internet connectivity  
+D) Cost efficiency with pay-per-use pricing  
+
+Answer: D) Cost efficiency with pay-per-use pricing  
+
+7. Cloud Computing offers which of the following benefits?  
+A) Increased capital expenditures (CapEx)  
+B) Reduced flexibility in service selection  
+C) Enhanced disaster recovery and backup mechanisms  
+D) Limited accessibility from remote locations  
+
+Answer: C) Enhanced disaster recovery and backup mechanisms  
+
+8. Which of the following is a disadvantage of Cloud Computing?  
+A) Increased control over infrastructure  
+B) Guaranteed network speed  
+C) Risk of data security breaches  
+D) Constant internet access is not required  
+
+Answer: C) Risk of data security breaches  
+
+9. What is the key difference between Cloud Computing and on-premises computing?  
+A) Cloud computing requires no internet connectivity  
+B) Users have more control over infrastructure in cloud environments  
+C) Cloud computing shifts IT management and maintenance responsibilities to the service provider  
+D) On-premises computing is more scalable than cloud computing  
+
+Answer: C) Cloud computing shifts IT management and maintenance responsibilities to the service provider  
+
+10. Which of the following is a direct consequence of Cloud Computing's resource pooling?  
+A) Users must buy their own hardware  
+B) Resources are shared among multiple users while ensuring data isolation  
+C) Each user gets dedicated hardware  
+D) Cloud services are only available in specific regions  
+
+Answer: B) Resources are shared among multiple users while ensuring data isolation  
+
+1. What is the main function of communication between distributed objects?  
+A) To allow objects located on different systems to interact as if they were on the same system  
+B) To execute procedures locally without involving the network  
+C) To store data remotely  
+D) To provide an interface for database queries  
+
+Answer: A) To allow objects located on different systems to interact as if they were on the same system  
+
+2. What does RPC (Remote Procedure Call) enable?  
+A) Local procedure calls within a single machine  
+B) A program to invoke a procedure on another machine as if it were a local procedure  
+C) Direct hardware communication between machines  
+D) Real-time file transfers between distributed systems  
+
+Answer: B) A program to invoke a procedure on another machine as if it were a local procedure  
+
+3. Which of the following is NOT a common method of communication in distributed systems?  
+A) Message Passing  
+B) Middleware  
+C) Direct Memory Access  
+D) RPC (Remote Procedure Call)  
+
+Answer: C) Direct Memory Access  
+
+4. In the context of RPC, what is the role of a stub?  
+A) It handles the client’s network connection  
+B) It processes the procedure request on the server  
+C) It acts as a proxy for the remote procedure and handles serialization of arguments  
+D) It manages the database queries  
+
+Answer: C) It acts as a proxy for the remote procedure and handles serialization of arguments  
+
+5. Which of the following protocols can RPC be based on?  
+A) FTP  
+B) HTTP, TCP, or UDP  
+C) SSH  
+D) SMTP  
+
+Answer: B) HTTP, TCP, or UDP  
+
+6. What is the main characteristic of Event-driven Architecture (EDA)?  
+A) Components communicate by making direct procedure calls  
+B) Events are detected, produced, and consumed asynchronously  
+C) All services are tightly coupled  
+D) It relies heavily on synchronous communication  
+
+Answer: B) Events are detected, produced, and consumed asynchronously  
+
+7. What is the purpose of an event in a distributed system?  
+A) To represent the end of a network connection  
+B) To signify a state change or occurrence, prompting other systems to react  
+C) To initiate a synchronous procedure call  
+D) To transmit sensitive data  
+
+Answer: B) To signify a state change or occurrence, prompting other systems to react  
+
+8. What is the difference between push and pull notifications?  
+A) Push notifications are sent when a user requests them, while pull notifications are sent automatically  
+B) Push notifications are initiated by the sender, while pull notifications are initiated by the receiver  
+C) Push notifications require manual configuration, while pull notifications do not  
+D) Push notifications are used for security purposes, while pull notifications are for communication  
+
+Answer: B) Push notifications are initiated by the sender, while pull notifications are initiated by the receiver  
+
+9. What is a common tool used in distributed systems for event notification?  
+A) WebSocket  
+B) Message Queues (e.g., RabbitMQ, Kafka)  
+C) RESTful APIs  
+D) HTTP Polling  
+
+Answer: B) Message Queues (e.g., RabbitMQ, Kafka)  
+
+10. What type of communication model does Remote Procedure Call (RPC) follow?  
+A) Synchronous  
+B) Asynchronous  
+C) Event-driven  
+D) Polling  
+
+Answer: A) Synchronous  
+
+1. What is the primary function of a Distributed File System (DFS)?  
+A) To store files in a central location only  
+B) To provide a unified file system interface for accessing files across multiple machines  
+C) To replicate files across a single server  
+D) To manage local file storage on a single machine  
+
+Answer: B) To provide a unified file system interface for accessing files across multiple machines  
+
+2. Which of the following is a key characteristic of DFS?  
+A) High redundancy and low scalability  
+B) Transparency, allowing users to access files without knowing their physical location  
+C) Limited support for fault tolerance  
+D) Centralized file management  
+
+Answer: B) Transparency, allowing users to access files without knowing their physical location  
+
+3. Which of the following is an example of a Distributed File System (DFS)?  
+A) HDFS (Hadoop Distributed File System)  
+B) NFSv3  
+C) SMB (Server Message Block)  
+D) FTP (File Transfer Protocol)  
+
+Answer: A) HDFS (Hadoop Distributed File System)  
+
+4. What does File Service Architecture provide?  
+A) Storage solutions for only local files  
+B) A method for managing file storage and retrieval over a network  
+C) A protocol for client-server communication  
+D) A hardware-based solution for managing files  
+
+Answer: B) A method for managing file storage and retrieval over a network  
+
+5. In File Service Architecture, which of the following components manages file access and storage?  
+A) File Server  
+B) Protocol Handler  
+C) Client  
+D) Network Switch  
+
+Answer: A) File Server  
+
+6. What is the primary difference between Client-Server and Peer-to-Peer file service architectures?  
+A) In Client-Server, the server manages files, while in Peer-to-Peer, every machine acts as both a client and a server  
+B) Peer-to-Peer architecture is used only in centralized systems  
+C) Client-Server architecture uses only FTP for file sharing  
+D) Peer-to-Peer architecture has a central server that manages file access  
+
+Answer: A) In Client-Server, the server manages files, while in Peer-to-Peer, every machine acts as both a client and a server  
+
+7. What is the main advantage of using NFS (Network File System)?  
+A) It allows a computer to access files as if they were stored locally, even if they are on remote servers  
+B) It only works with Windows operating systems  
+C) It is mainly used for file compression  
+D) It only supports file transfer protocols like FTP  
+
+Answer: A) It allows a computer to access files as if they were stored locally, even if they are on remote servers  
+
+8. Which of the following is a feature of NFS?  
+A) NFS supports only one file system type  
+B) NFS is stateful and requires servers to maintain session information  
+C) NFS uses Remote Procedure Calls (RPC) for client-server communication  
+D) NFS does not support fault tolerance  
+
+Answer: C) NFS uses Remote Procedure Calls (RPC) for client-server communication  
+
+9. What does the statelessness of NFS mean?  
+A) The server maintains information about the client session  
+B) The server does not keep any session state between requests  
+C) NFS can only be used with TCP connections  
+D) NFS requires an external database for session management  
+
+Answer: B) The server does not keep any session state between requests  
+
+10. Which version of NFS introduced support for better security, such as Kerberos authentication?  
+A) NFSv2  
+B) NFSv3  
+C) NFSv4  
+D) NFSv5  
+
+Answer: C) NFSv4  
 
